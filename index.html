@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transporte Escolar da Tia Zélia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="/src/style.css">
+
+</head>
+<body>
+<header class="text-center py-3">
+  <h1>Transporte Escolar da Tia Zélia</h1>
+</header>
+<main class="container my-4">
+  <!-- Texto de apresentação -->
+  <div class="text-center mb-4">
+    <p class="lead">
+      A solução para o transporte escolar de seu filho, sob medida para a sua necessidade, a Tia Zélia oferece transporte escolar com
+      <strong>segurança</strong>, <strong>pontualidade</strong> e <strong>confiança</strong>.
+    </p>
+    <p>
+      Roteiro para os bairros de <strong>Vila Laura</strong>, <strong>Matatu</strong>, <strong>Brotas</strong>, <strong>Acupe de Brotas</strong> e <strong>Pituba</strong>, para os colégios <strong> Nazaré</strong>, <strong>Adventista Nazaré</strong>, <strong>Antônio Vieira</strong>, garantindo tranquilidade e conforto para você e sua família.
+    </p>
+  </div>
+
+  <!-- Botão do WhatsApp -->
+  <div class="text-center my-4">
+    <a id="whatsappButton" class="btn btn-success btn-lg" target="_blank">
+      📞 Fale com a Tia Zélia pelo WhatsApp
+    </a>
+  </div>
+
+  <strong>Mapa do roteiro</strong>
+  <!-- Mapa -->
+  <div id="map" class="mb-4"></div>
+
+
+</main>
+<footer class="text-center py-3">
+  <p>&copy; 2024 Transporte Escolar da Tia Zélia. Todos os direitos reservados.</p>
+  <strong><a href="http://" target="_blank" rel="noopener noreferrer">Feito por Vanderlei Neto</a></strong>
+</footer>
+<div id="app"></div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
