@@ -39,3 +39,8 @@ a {
   color: #FFD700; /* Dourado */
 
 }
+
+a:hover {
+  text-decoration: underline;
+  font-size: larger;
+}
