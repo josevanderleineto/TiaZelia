@@ -7,43 +7,81 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
   <link rel="stylesheet" href="/src/style.css">
-
 </head>
 <body>
-<header class="text-center py-3">
-  <h1>Transporte Escolar da Tia Zélia</h1>
-</header>
-<main class="container my-4">
-  <!-- Texto de apresentação -->
-  <div class="text-center mb-4">
-    <p class="lead">
-      A solução para o transporte escolar de seu filho, sob medida para a sua necessidade, a Tia Zélia oferece transporte escolar com
-      <strong>segurança</strong>, <strong>pontualidade</strong> e <strong>confiança</strong>.
-    </p>
-    <p>
-      Roteiro para os bairros de <strong>Vila Laura</strong>, <strong>Matatu</strong>, <strong>Brotas</strong>, <strong>Acupe de Brotas</strong> e <strong>Pituba</strong>, para os colégios <strong> Nazaré</strong>, <strong>Adventista Nazaré</strong>, <strong>Antônio Vieira</strong>, garantindo tranquilidade e conforto para você e sua família.
-    </p>
-  </div>
 
-  <!-- Botão do WhatsApp -->
-  <div class="text-center my-4">
-    <a id="whatsappButton" class="btn btn-success btn-lg" target="_blank">
-      📞 Fale com a Tia Zélia pelo WhatsApp
-    </a>
-  </div>
+  <!-- Header: onde o menu será inserido -->
+  <header id="header">
+    
+  </header>
 
-  <strong>Mapa do roteiro</strong>
-  <!-- Mapa -->
-  <div id="map" class="mb-4"></div>
+  <!-- Seção Home -->
+  <section id="home" class="section">
+    <div class="container">
+      <h2>Bem-vindo ao Transporte Escolar da Tia Zélia</h2>
+      <p>A Tia Zélia oferece transporte escolar seguro, pontual e confiável para seus filhos, com trajetos pelos bairros de Vila Laura, Pituba, Brotas, e mais.</p>
+      <a href="#sobre">Saiba mais</a>
+    </div>
+  </section>
 
+  <!-- Seção Sobre -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <h3>Sobre a Tia Zélia</h3>
+      <div class="image-left">
+        <div class="text">
+          <p>Com mais de 10 anos de experiência, a Tia Zélia é referência em transporte escolar, garantindo o máximo conforto e segurança para seus filhos. Nosso compromisso é com a segurança e o bem-estar de cada criança, proporcionando trajetos tranquilos e pontuais.</p>
+        </div>
+        <img src="imagem1.jpg" alt="Imagem ilustrativa sobre a Tia Zélia">
+      </div>
+    </div>
+  </section>
 
-</main>
-<footer class="text-center py-3">
-  <p>&copy; 2024 Transporte Escolar da Tia Zélia. Todos os direitos reservados.</p>
-  <strong><a href="http://" target="_blank" rel="noopener noreferrer">Feito por Vanderlei Neto</a></strong>
-</footer>
-<div id="app"></div>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script type="module" src="/src/main.ts"></script>
+  <!-- Seção Serviços de Transporte Escolar -->
+  <section id="servicos" class="section">
+    <div class="container">
+      <h3>Serviços de Transporte Escolar</h3>
+      <div class="image-right">
+        <div class="text">
+          <p>Oferecemos transporte para escolas como Adventista Nazaré, Antônio Vieira, entre outras. A segurança e o conforto são nossas principais prioridades, além de garantir que cada trajeto seja feito com a máxima pontualidade.</p>
+        </div>
+        <img src="imagem2.jpg" alt="Imagem ilustrativa de transporte escolar">
+      </div>
+      <!-- Mapa do Roteiro -->
+      <h4>Roteiro dos bairros atendidos</h4>
+      <div id="map"></div>
+    </div>
+  </section>
+
+  <!-- Seção City Tour -->
+  <section id="city-tour" class="section">
+    <div class="container">
+      <h3>City Tour</h3>
+      <p>Além do transporte escolar, também oferecemos passeios pela cidade para grupos, com segurança e conforto. Os passeios são realizados em veículos confortáveis e com guias especializados, permitindo que os passageiros conheçam os principais pontos turísticos e culturais da cidade.</p>
+      
+      <!-- Imagem ilustrativa do City Tour -->
+      <div class="image-center">
+        <img src="imagem_city_tour.jpg" alt="Imagem de City Tour" class="img-fluid">
+      </div>
+      
+      <p>Se você está procurando uma maneira tranquila e segura de explorar os pontos turísticos de nossa cidade, o City Tour da Tia Zélia é a escolha perfeita. Desde o Pelourinho até a Barra, passando pelo Mercado Modelo, nosso serviço de City Tour oferece uma experiência única, seja para escolas, grupos de turistas ou empresas.</p>
+      <p>Com guias especializados, oferecemos tours personalizados que atendem às necessidades de cada grupo, com opções de horários flexíveis e roteiros completos. Venha conhecer a nossa cidade de uma forma diferente, com conforto e segurança garantidos!</p>
+    </div>
+  </section>
+
+  <!-- Footer: onde o menu também será inserido -->
+  <footer id="footer">
+   <div id="menu-footer">
+   </div>
+    <!-- O menu será inserido aqui via JavaScript -->
+    <div class="container">
+      <p>&copy; 2024 Transporte Escolar da Tia Zélia. Todos os direitos reservados.</p>
+      <a href="http://" target="_blank" rel="noopener noreferrer">Feito por Vanderlei Neto</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

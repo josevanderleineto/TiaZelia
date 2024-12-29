@@ -1,46 +1,225 @@
+/* Estilos gerais */
 body {
   background-color: #f8f9fa; /* Fundo claro */
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Texto mais suave */
 }
-#map {
-  height: 400px;
-  width: 100%;
-  border: 1px solid #ccc;
-  margin: 0 auto 20px auto; /* Centraliza o mapa */
+
+h1, h2 {
+  font-family: 'Arial', sans-serif;
+  color: #d52121; /* Cor vermelha escura */
 }
-footer {
-  background-color: #d52121; /* Vermelho escuro */
-  color: #FFD700; /* Dourado */
-  padding: 10px 0;
-  text-align: center;
-}
-header {
-  background-color: #d52121; /* Vermelho escuro */
-  color: #FFD700; /* Dourado */
-  padding: 20px 0;
-  text-align: center;
-}
-main {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
-}
-.btn-success {
-  background-color:  #0bbf59; /* Vermelho escuro */
-  border-color: #d52121; /* Vermelho escuro */
-}
-.btn-success:hover {
-  background-color: #27b966; /* Dourado */
+
+h2 {
+  margin-top: 20px;
 }
 
 a {
-  text-decoration: none;
   color: #FFD700; /* Dourado */
-
+  text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
   text-decoration: underline;
-  font-size: larger;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #d52121; /* Vermelho escuro */
+  padding: 0.8rem 1rem;
+}
+
+.navbar-nav .nav-link {
+  color: #FFD700 !important; /* Dourado para os links */
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff !important; /* Branco no hover */
+}
+
+/* Navbar com Botão do WhatsApp */
+.navbar .whatsapp-btn {
+  background-color: #25D366;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+  margin-left: 20px;
+}
+
+.navbar .whatsapp-btn:hover {
+  background-color: #128C7E;
+}
+
+/* Centralização do conteúdo da navbar */
+.navbar-collapse {
+  justify-content: center;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #FFD700;
+}
+
+.navbar-toggler {
+  border-color: #FFD700;
+}
+
+.navbar-toggler-icon {
+  border: #FFD700;
+}
+
+/* Seções */
+.section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.section-title {
+  color: #d52121; /* Vermelho escuro */
+  margin-bottom: 20px;
+}
+
+#home {
+  text-align: center;
+  padding-top: 50px;
+}
+
+#home h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #d52121; /* Vermelho escuro */
+}
+
+#home p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+#home a {
+  background-color: #FFD700;
+  padding: 12px 20px;
+  color: #000;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+#home a:hover {
+  background-color: #d52121; /* Vermelho escuro */
+  color: #fff;
+}
+
+/* Seção Sobre */
+#sobre {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+#sobre h3 {
+  font-size: 2rem;
+  color: #d52121; /* Vermelho escuro */
+}
+
+#sobre p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#sobre img {
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Mapa */
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #home h2 {
+    font-size: 2rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  #servicos, #city-tour, #sobre {
+    padding: 20px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  /* Para a imagem e texto lado a lado em telas grandes */
+  .image-left, .image-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-left img, .image-right img {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  /* Reduzir tamanho dos ícones no menu */
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+  }
+}
+
+/* Estilo para layout lado a lado (imagem e texto) */
+.image-left, .image-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-left img, .image-right img {
+  width: 45%;
+}
+
+.image-left .text, .image-right .text {
+  width: 50%;
+  padding: 20px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #d52121; /* Vermelho escuro */
+  color: #FFD700; /* Dourado */
+  padding: 20px 0;
+  text-align: center; /* Centraliza o texto */
+}
+
+footer a {
+  color: #FFD700; /* Dourado */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #fff; /* Branco no hover */
 }

@@ -1,22 +1,23 @@
+// Importando o Leaflet
 import L from 'leaflet';
-import './style.css'
+
+// Inicializa o mapa
 document.addEventListener('DOMContentLoaded', () => {
-  // Inicializa o mapa
-  const map = L.map('map').setView([-12.9714, -38.5014], 13);
+  const map = L.map('map').setView([-12.9714, -38.5014], 13); // Coordenadas de Salvador, você pode ajustar para a localização da sua operação.
 
   // Adiciona o tile layer do OpenStreetMap
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  // Define o tipo para bairros
+  // Definindo a interface para os bairros atendidos
   interface Bairro {
     name: string;
     lat: number;
     lng: number;
   }
 
-  // Adiciona marcadores para os bairros atendidos
+  // Lista de bairros atendidos pela Tia Zélia
   const bairros: Bairro[] = [
     { name: 'Brotas', lat: -12.9833, lng: -38.4894 },
     { name: 'Matatu de Brotas', lat: -12.9734, lng: -38.4951 },
@@ -25,17 +26,61 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'Pituba', lat: -12.99926, lng: -38.4555 }
   ];
 
+  // Adiciona marcadores no mapa para cada bairro
   bairros.forEach((bairro: Bairro) => {
     L.marker([bairro.lat, bairro.lng])
       .addTo(map)
-      .bindPopup(`<b>${bairro.name}</b>`);
+      .bindPopup(`<b>${bairro.name}</b>`)
+      .openPopup(); // Abre o popup com o nome do bairro
   });
 
-  // Configura o botão do WhatsApp
+  // Adiciona o botão do WhatsApp
   const whatsappButton = document.getElementById('whatsappButton') as HTMLButtonElement | null;
   if (whatsappButton) {
     whatsappButton.addEventListener('click', () => {
-      window.open('https://wa.me/5571991415183', '_blank');
+      window.open('https://wa.me/5571991415183', '_blank'); // Substitua pelo número de WhatsApp real
     });
   }
+
+  // Outros ajustes no mapa ou interatividade podem ser adicionados aqui
 });
+
+// main.ts
+
+// Função para gerar o código HTML do menu
+function createMenu(): string {
+  return `
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">Tia Zélia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#city-tour">City Tour</a></li>
+        </ul>
+        <a href="https://wa.me/5571991415183" class="whatsapp-btn" target="_blank">WhatsApp</a>
+      </div>
+    </nav>
+  `;
+}
+
+// Função para inserir o menu no Header e no Footer
+function insertMenu() {
+  const header = document.getElementById('header');
+  const footer = document.getElementById('menu-footer');
+
+  // Verifique se os elementos existem e insira o menu
+  if (header && footer) {
+    header.innerHTML = createMenu();  // Insere o menu no header
+    footer.innerHTML = createMenu();  // Insere o menu no footer
+  } else {
+    console.error("Não foi possível encontrar os elementos 'header' ou 'footer'.");
+  }
+}
+
+// Aguardar o carregamento completo do DOM
+window.addEventListener('DOMContentLoaded', insertMenu);
