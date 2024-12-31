@@ -1,8 +1,21 @@
-/* Estilos gerais */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f8f9fa; /* Fundo claro */
   font-family: 'Arial', sans-serif;
   color: #333; /* Texto mais suave */
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h1, h2 {
@@ -40,7 +53,6 @@ a:hover {
   color: #fff !important; /* Branco no hover */
 }
 
-/* Navbar com Botão do WhatsApp */
 .navbar .whatsapp-btn {
   background-color: #25D366;
   color: #fff;
@@ -55,7 +67,6 @@ a:hover {
   background-color: #128C7E;
 }
 
-/* Centralização do conteúdo da navbar */
 .navbar-collapse {
   justify-content: center;
 }
@@ -76,7 +87,12 @@ a:hover {
 
 /* Seções */
 .section {
-  padding: 40px 0;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -85,26 +101,26 @@ a:hover {
   margin-bottom: 20px;
 }
 
-#home {
-  text-align: center;
-  padding-top: 50px;
+.section p {
+  font-size: 1.6rem; /* Fonte maior para outras seções */
+  line-height: 1.8;
 }
 
+/* Seção Home */
 #home h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #d52121; /* Vermelho escuro */
 }
 
 #home p {
-  font-size: 1.1rem;
+  font-size: 2rem;
   color: #333;
-  line-height: 1.6;
 }
 
 #home a {
   background-color: #FFD700;
-  padding: 12px 20px;
+  padding: 18px 50px;
   color: #000;
   border-radius: 50px;
   transition: background-color 0.3s;
@@ -116,35 +132,40 @@ a:hover {
 }
 
 /* Seção Sobre */
-#sobre {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-}
-
-#sobre h3 {
-  font-size: 2rem;
-  color: #d52121; /* Vermelho escuro */
-}
-
-#sobre p {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
 #sobre img {
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  width: 100%;
+  max-width: 60%;
+}
+
+/* Layout imagem ao lado do texto */
+.image-left, .image-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.image-left img, .image-right img {
+  width: 45%; /* Ajusta a largura da imagem para 45% */
+  margin-left: 20px;
+}
+
+.image-left .text, .image-right .text {
+  width: 50%; /* Ajusta o texto para ter 50% de largura */
+  padding: 20px;
+}
+
+.image-left .text p, .image-right .text p {
+  font-size: 1.4rem; /* Ajusta o tamanho da fonte */
+  line-height: 1.8;
 }
 
 /* Mapa */
 #map {
-  height: 400px;
+  height: 300px;
   width: 100%;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -161,49 +182,31 @@ a:hover {
     font-size: 1.8rem;
   }
 
-  #servicos, #city-tour, #sobre {
-    padding: 20px;
+  #home p, #sobre p {
+    font-size: 1.2rem;
   }
 
   .navbar-nav {
     text-align: center;
   }
 
-  /* Para a imagem e texto lado a lado em telas grandes */
   .image-left, .image-right {
-    display: flex;
     flex-direction: column;
+    text-align: center;
   }
 
   .image-left img, .image-right img {
     margin-bottom: 20px;
-    width: 100%;
+    width: 80%; /* Imagem ocupa 80% da largura */
   }
 
   .navbar-collapse {
     text-align: center;
   }
 
-  /* Reduzir tamanho dos ícones no menu */
   .navbar-nav .nav-link {
     font-size: 1rem;
   }
-}
-
-/* Estilo para layout lado a lado (imagem e texto) */
-.image-left, .image-right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.image-left img, .image-right img {
-  width: 45%;
-}
-
-.image-left .text, .image-right .text {
-  width: 50%;
-  padding: 20px;
 }
 
 /* Rodapé */
@@ -211,7 +214,7 @@ footer {
   background-color: #d52121; /* Vermelho escuro */
   color: #FFD700; /* Dourado */
   padding: 20px 0;
-  text-align: center; /* Centraliza o texto */
+  text-align: center;
 }
 
 footer a {

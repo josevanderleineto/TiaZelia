@@ -59,8 +59,9 @@ function createMenu(): string {
         <ul class="navbar-nav mx-auto">
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-          <li class="nav-item"><a class="nav-link" href="#city-tour">City Tour</a></li>
+          <li class="nav-item"><a class="nav-link" href="#transporte-escolar">Transporte Escolar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#transporte-executivo">Transporte Executivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#transporte-para-idosas">Transporte para Idosas</a></li>
         </ul>
         <a href="https://wa.me/5571991415183" class="whatsapp-btn" target="_blank">WhatsApp</a>
       </div>
