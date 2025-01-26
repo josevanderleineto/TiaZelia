@@ -12,7 +12,7 @@
 
   <!-- Header: onde o menu será inserido -->
   <header id="header">
-    
+    <!-- O menu será inserido aqui via JavaScript -->
   </header>
 
   <!-- Seção Home -->
@@ -20,34 +20,33 @@
     <div class="container">
       <h2>Bem-vindo ao Transporte Escolar da Tia Zélia</h2>
       <p>A Tia Zélia oferece transporte escolar seguro, pontual e confiável para seus filhos, com trajetos pelos bairros de Vila Laura, Pituba, Brotas, e mais.</p>
-      <a href="#sobre">Saiba mais</a>
+      <a href="#sobre" class="btn btn-primary">Saiba mais</a>
     </div>
   </section>
-
-  <!-- Seção Sobre -->
-  <section id="sobre" class="section">
-    <div class="container">
-      <h3>Sobre a Tia Zélia</h3>
-      <div class="image-left">
-        <div class="text">
-          <p>Com mais de 10 anos de experiência, a Tia Zélia é referência em transporte escolar, garantindo o máximo conforto e segurança para seus filhos. Nosso compromisso é com a segurança e o bem-estar de cada criança, proporcionando trajetos tranquilos e pontuais.</p>
-        </div>
-        <img src="imagem1.jpg" alt="Imagem ilustrativa sobre a Tia Zélia">
+<!-- Seção Sobre -->
+<section id="sobre" class="section">
+  <div class="container">
+    <h3>Sobre a Tia Zélia</h3>
+    <div class="d-flex flex-column flex-md-row">
+      <div class="text-md-start mb-3"> <!-- Alinhamento à esquerda -->
+        <p>Zelia Mascarnhas oferece serviços de transporte escolar, executivo e particular, com um foco especial no atendimento às mulheres em Salvador. Cada viagem é planejada com dedicação para garantir qualidade, segurança e pontualidade, proporcionando conforto e confiança aos nossos clientes.</p>
+        <p>Seja para levar as crianças à escola, atender demandas corporativas ou oferecer um transporte privado e seguro para mulheres, nossa prioridade é superar expectativas e oferecer uma experiência tranquila e confiável.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Seção Serviços de Transporte Escolar -->
   <section id="transporte-escolar" class="section">
     <div class="container">
       <h3>Serviços de Transporte Escolar</h3>
-      <div class="image-right">
-        <div class="text">
-          <p>Oferecemos transporte para escolas como Adventista Nazaré, Antônio Vieira, entre outras. A segurança e o conforto são nossas principais prioridades, além de garantir que cada trajeto seja feito com a máxima pontualidade.</p>
+      <div class="d-flex flex-column flex-md-row">
+        <div class="text-md-start mb-3">
+          <p>Zelia Mascarnhas oferece um serviço de transporte escolar seguro e pontual, atendendo às famílias dos bairros de Vila Laura, Pituba e Brotas. Nosso objetivo é garantir que as crianças cheguem à escola com conforto e segurança, proporcionando tranquilidade para os pais.</p>
         </div>
-        <img src="./public/transporte-escolar.png" alt="Imagem ilustrativa de transporte escolar">
+        <img src="./public/transporte-escolar.png" alt="Imagem ilustrativa de transporte escolar" class="img-fluid img-carro">
       </div>
-      <!-- Mapa do Roteiro -->
       <h4>Roteiro dos bairros atendidos</h4>
       <div id="map"></div>
     </div>
@@ -58,25 +57,26 @@
     <div class="container">
       <h3>Transporte Executivo</h3>
       <p>Além do transporte escolar, também oferecemos passeios pela cidade para grupos, com segurança e conforto. Os passeios são realizados em veículos confortáveis e com guias especializados, permitindo que os passageiros conheçam os principais pontos turísticos e culturais da cidade.</p>
-      
-    </div>
-
-  </section>
-
-  <section class="transporte-para-idosas" >
-    <h3>Transporte para Idiosas</h3>
-    <p>Para crianças com deficiência auditiva ou cegueira, oferecemos transporte seguro, pontual e confiável, com trajetos pelos bairros de Vila Laura, Pituba, Brotas, e mais. A Tia Zélia é a escolha perfeita para essas crianças, com opções de horários flexíveis e roteiros completos.</p>
-
-    <div class="image-center">
-      <img src="imagem_city_tour.jpg" alt="Imagem de Tranporte para idosas" class="img-fluid">
     </div>
   </section>
+
+  <!-- Seção Transporte para Idosas -->
+  <section id="transporte-para-mulheres" class="section">
+    <h3>Transporte para mulheres</h3>
+    <p>Zelia Mascarnhas oferece serviços de transporte particular voltados para mulheres em Salvador. Com um foco especial em segurança, conforto e pontualidade, o serviço é ideal para deslocamentos no dia a dia, como idas ao trabalho, eventos ou outros compromissos.</p>
+    <p>Nosso objetivo é proporcionar tranquilidade em cada trajeto, garantindo que você chegue ao seu destino com conforto e confiança. Seja qual for a sua necessidade, o transporte para mulheres de Zelia Mascarnhas é a escolha certa para se locomover com praticidade e cuidado em Salvador.</p>
+
+    <div class="text-center">
+      <img src="imagem_city_tour.jpg" alt="Imagem de Transporte para idosas" class="img-fluid">
+    </div>
+  </section>
+
   <!-- Footer: onde o menu também será inserido -->
   <footer id="footer">
-   <div id="menu-footer">
-   </div>
-    <!-- O menu será inserido aqui via JavaScript -->
-    <div class="container">
+    <div id="menu-footer">
+      <!-- O menu será inserido aqui via JavaScript -->
+    </div>
+    <div class="container text-center">
       <p>&copy; 2024 Transporte Escolar da Tia Zélia. Todos os direitos reservados.</p>
       <a href="http://" target="_blank" rel="noopener noreferrer">Feito por Vanderlei Neto</a>
     </div>

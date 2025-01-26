@@ -18,7 +18,7 @@ main {
   flex-direction: column;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5, h6{
   font-family: 'Arial', sans-serif;
   color: #d52121; /* Cor vermelha escura */
 }
@@ -88,12 +88,13 @@ a:hover {
 /* Seções */
 .section {
   padding: 20px;
-  height: 100vh;
+  height: 100vh; /* Ocupa 100% da altura da viewport */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden; /* Evita que o conteúdo transborde */
 }
 
 .section-title {
@@ -102,7 +103,7 @@ a:hover {
 }
 
 .section p {
-  font-size: 1.6rem; /* Fonte maior para outras seções */
+  font-size: 2rem; /* Fonte maior para outras seções */
   line-height: 1.8;
 }
 
@@ -111,6 +112,11 @@ a:hover {
   font-size: 3.5rem;
   font-weight: 700;
   color: #d52121; /* Vermelho escuro */
+}
+
+h3 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
 }
 
 #home p {
@@ -169,6 +175,11 @@ a:hover {
   width: 100%;
   border-radius: 8px;
   border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.img-carro {
+  width: 400px;
   margin-top: 20px;
 }
 
